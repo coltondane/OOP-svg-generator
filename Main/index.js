@@ -53,7 +53,8 @@ function prompts() {
                     `${shape}`,
                     `${shapeColor}`
                 )
-                triangle.makeTriangle();
+                // call the makeCircle method
+                // triangle.makeTriangle();
             }
             else {
                 const square = new Square(
@@ -62,6 +63,7 @@ function prompts() {
                     `${shape}`,
                     `${shapeColor}`
                 )
+                // call the makeCircle method
                 square.makeSquare();
             }
         })

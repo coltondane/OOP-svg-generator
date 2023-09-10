@@ -32,10 +32,10 @@ class Square extends Shape{
         super(text, textColor, shape, shapeColor);
     }
     makeSquare() {
-        this.shape = `<svg xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="${this.shapeColor}"></rect><text x="0" y="50" font-family="Verdana" font-size="35fill="${this.textColor}">${text}</text></svg>`
+        this.shape = `<svg xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="${this.shapeColor}"></rect><text x="0" y="50" font-family="Verdana" font-size="35fill="${this.textColor}">${this.text}</text></svg>`
+
+        console.log(this.shape);
     }
 }
 
-module.exports = Circle;
-module.exports = Triangle;
 module.exports = Square;

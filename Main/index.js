@@ -53,7 +53,6 @@ function prompts() {
                     `${shape}`,
                     `${shapeColor}`
                 )
-                // call the makeCircle method
                 triangle.makeTriangle();
             }
             else {
@@ -63,8 +62,7 @@ function prompts() {
                     `${shape}`,
                     `${shapeColor}`
                 )
-                // call the makeCircle method
-                square.makeCircle();
+                square.makeSquare();
             }
         })
     }

@@ -23,7 +23,7 @@ class Triangle extends Shape{
         super(text, textColor, shape, shapeColor);
     }
     makeTriangle() {
-        this.shape =  '<svg height="250" width="250"><polygon points="225,10 100, 210 350, 210" style="fill:lime" /> <text x="150" y="125" text-anchor="middle" fill="white" font-size="100px" font-family="Arial" dy=".3em">BC</text> Sorry, your browser does not support inline SVG. </svg>'
+        this.shape =  `<svg height="250" width="250"><polygon points="225,10 100, 210 350, 210" style="fill:${this.shapeColor}" /> <text x="150" y="125" text-anchor="middle" fill="${this.textColor}" font-size="100px" font-family="Arial" dy=".3em">${text}</text></svg>`
     }
 }
 
@@ -32,8 +32,10 @@ class Square extends Shape{
         super(text, textColor, shape, shapeColor);
     }
     makeSquare() {
-        this.shape = '<svg xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="red"></rect><text x="0" y="50" font-family="Verdana" font-size="35fill="blue">Hello</text></svg>'
+        this.shape = `<svg xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="${this.shapeColor}"></rect><text x="0" y="50" font-family="Verdana" font-size="35fill="${this.textColor}">${text}</text></svg>`
     }
 }
 
-module.exports = Circle, Square, Triangle;
+module.exports = Circle;
+module.exports = Triangle;
+module.exports = Square;

@@ -8,7 +8,7 @@ class Logo {
     constructor() {
         this.text = '';
         this.textColor = '';
-        this.shape = 'h';
+        this.shape = '';
         this.shapeColor = '';
     }
     // prompt the user
@@ -39,9 +39,11 @@ class Logo {
             ])
             // Create the logo
             .then((answers) => {
-                log(answers);
-                log(this.shape);
+                return this.construct(answers);
             })
+    }
+    construct(prompts) {
+        log(prompts);
     }
 }
 

@@ -33,6 +33,8 @@ function prompts() {
         ])
         // Create the logo
         .then(({text, textColor, shape, shapeColor}) => {
+            // create data variable
+            let data = '';
             // set the text to upper case
             text = text.toUpperCase();
             // conditonals 
@@ -44,7 +46,7 @@ function prompts() {
                     `${shapeColor}`
                 )
                 // call the makeCircle method
-                circle.makeCircle();
+                data = circle.makeCircle();
             }
             else if (shape === 'Triangle') {
                 const triangle = new Triangle(
@@ -54,7 +56,7 @@ function prompts() {
                     `${shapeColor}`
                 )
                 // call the makeCircle method
-                // triangle.makeTriangle();
+                data = triangle.makeTriangle();
             }
             else {
                 const square = new Square(
@@ -64,7 +66,7 @@ function prompts() {
                     `${shapeColor}`
                 )
                 // call the makeCircle method
-                square.makeSquare();
+                data = square.makeSquare();
             }
         })
     }

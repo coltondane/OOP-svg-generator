@@ -68,6 +68,11 @@ function prompts() {
                 // call the makeCircle method
                 data = square.makeSquare();
             }
+            return data;
+        })
+        // render the svg file
+        .then((data) => {
+
         })
     }
 

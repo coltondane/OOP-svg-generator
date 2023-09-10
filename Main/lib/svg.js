@@ -1,5 +1,6 @@
 // import libraries
 const inquirer = require('inquirer');
+const{ log } = require('console');
 
 
 // create the Shape class with its constructors
@@ -7,9 +8,10 @@ class Logo {
     constructor() {
         this.text = '';
         this.textColor = '';
-        this.shape = '';
+        this.shape = 'h';
         this.shapeColor = '';
     }
+    // prompt the user
     prompts() {
         return inquirer
             .prompt([
@@ -35,11 +37,13 @@ class Logo {
                     message: 'Enter the color for your shape (Hexidecimal accepted)',
                 }
             ])
-            // 
+            // Create the logo
+            .then((answers) => {
+                log(answers);
+                log(this.shape);
+            })
     }
 }
-
-const logo = new Logo(answers);
 
 // export file
 module.exports = Logo;

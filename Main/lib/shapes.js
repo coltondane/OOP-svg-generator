@@ -1,38 +1,38 @@
-class Circle {
+// parent class 
+class Shape {
     constructor(text, textColor, shape, shapeColor) {
         this.text = text;
         this.textColor = textColor;
         this.shape = shape;
         this.shapeColor = shapeColor;
+    }
+}
+class Circle extends Shape{
+    constructor(text, textColor, shape, shapeColor) {
+        super(text, textColor, shape, shapeColor);
     }
     makeCircle() {
-        this.shape = '<svg width="250" height="250"> <circle cx="125" cy="125" r="100" fill="#aeaeae" /> <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="100px" font-family="Arial" dy=".3em">BC</text> Sorry, your browser does not support inline SVG. </svg>'
+        this.shape = `<svg width="250" height="250"> <circle cx="125" cy="125" r="100" fill="${this.shapeColor}" /> <text x="50%" y="50%" text-anchor="middle" fill="${this.textColor}" font-size="100px" font-family="Arial" dy=".3em">${this.text}</text></svg>`
+
+        console.log(this.shape);
     }
 }
 
-class Triangle {
+class Triangle extends Shape{
     constructor(text, textColor, shape, shapeColor) {
-        this.text = text;
-        this.textColor = textColor;
-        this.shape = shape;
-        this.shapeColor = shapeColor;
-        this.shape = '<svg height="250" width="250"><polygon points="225,10 100, 210 350, 210" style="fill:lime" /> <text x="150" y="125" text-anchor="middle" fill="white" font-size="100px" font-family="Arial" dy=".3em">BC</text> Sorry, your browser does not support inline SVG. </svg>'
+        super(text, textColor, shape, shapeColor);
     }
     makeTriangle() {
-        this.shape = '<svg width="250" height="250"> <circle cx="125" cy="125" r="100" fill="#aeaeae" /> <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="100px" font-family="Arial" dy=".3em">BC</text> Sorry, your browser does not support inline SVG. </svg>'
+        this.shape =  '<svg height="250" width="250"><polygon points="225,10 100, 210 350, 210" style="fill:lime" /> <text x="150" y="125" text-anchor="middle" fill="white" font-size="100px" font-family="Arial" dy=".3em">BC</text> Sorry, your browser does not support inline SVG. </svg>'
     }
 }
 
-class Square {
+class Square extends Shape{
     constructor(text, textColor, shape, shapeColor) {
-        this.text = text;
-        this.textColor = textColor;
-        this.shape = shape;
-        this.shapeColor = shapeColor;
-        this.shape = '<svg xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="red"></rect><text x="0" y="50" font-family="Verdana" font-size="35fill="blue">Hello</text></svg>'
+        super(text, textColor, shape, shapeColor);
     }
     makeSquare() {
-        this.shape = '<svg width="250" height="250"> <circle cx="125" cy="125" r="100" fill="#aeaeae" /> <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="100px" font-family="Arial" dy=".3em">BC</text> Sorry, your browser does not support inline SVG. </svg>'
+        this.shape = '<svg xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="red"></rect><text x="0" y="50" font-family="Verdana" font-size="35fill="blue">Hello</text></svg>'
     }
 }
 

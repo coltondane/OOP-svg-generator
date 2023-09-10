@@ -32,8 +32,40 @@ function prompts() {
             }
         ])
         // Create the logo
-        .then((answers) => {
-            log(answers);
+        .then(({text, textColor, shape, shapeColor}) => {
+            // set the text to upper case
+            text = text.toUpperCase();
+            // conditonals 
+            if (shape === 'Circle') {
+                const circle = new Circle(
+                    `${text}`,
+                    `${textColor}`,
+                    `${shape}`,
+                    `${shapeColor}`
+                )
+                // call the makeCircle method
+                circle.makeCircle();
+            }
+            else if (shape === 'Triangle') {
+                const triangle = new Triangle(
+                    `${text}`,
+                    `${textColor}`,
+                    `${shape}`,
+                    `${shapeColor}`
+                )
+                // call the makeCircle method
+                triangle.makeTriangle();
+            }
+            else {
+                const square = new Square(
+                    `${text}`,
+                    `${textColor}`,
+                    `${shape}`,
+                    `${shapeColor}`
+                )
+                // call the makeCircle method
+                square.makeCircle();
+            }
         })
     }
 

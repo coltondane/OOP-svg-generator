@@ -1,9 +1,9 @@
 // import libraries
 const inquirer = require('inquirer');
 const{ log } = require('console');
-const Circle = require('./lib/shapes.js');
-const Square = require('./lib/shapes.js');
-const Triangle = require('./lib/shapes.js');
+const Circle = require('./lib/shape.js');
+const Square = require('./lib/shape.js');
+const Triangle = require('./lib/shape.js');
 
 // prompt the user
 function prompts() {

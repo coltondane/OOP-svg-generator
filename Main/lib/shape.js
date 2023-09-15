@@ -40,4 +40,4 @@ class Square extends Shape{
     }
 }
 
-module.exports = {Circle, Triangle, Square};
+module.exports = Shape;

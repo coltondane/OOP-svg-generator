@@ -1,9 +1,9 @@
 // import libraries
 const inquirer = require('inquirer');
 const{ log } = require('console');
-const Circle = require('./lib/shape.js');
-const Square = require('./lib/shape.js');
-const Triangle = require('./lib/shape.js');
+const Circle = require('./lib/circle.js');
+const Square = require('./lib/square.js');
+const Triangle = require('./lib/triangle.js');
 
 // prompt the user
 function prompts() {
@@ -47,6 +47,7 @@ function prompts() {
                 )
                 // call the makeCircle method
                 data = circle.makeCircle();
+                log(data);
             }
             else if (shape === 'Triangle') {
                 const triangle = new Triangle(
@@ -55,8 +56,9 @@ function prompts() {
                     `${shape}`,
                     `${shapeColor}`
                 )
-                // call the makeCircle method
+                // call the makeTriangle method
                 data = triangle.makeTriangle();
+                log(data);
             }
             else {
                 const square = new Square(
@@ -65,8 +67,9 @@ function prompts() {
                     `${shape}`,
                     `${shapeColor}`
                 )
-                // call the makeCircle method
+                // call the makeSquare method
                 data = square.makeSquare();
+                log(data);
             }
             return data;
         })

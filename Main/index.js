@@ -47,7 +47,7 @@ function prompts() {
                     `${shapeColor}`
                 )
                 // call the makeCircle method
-                data = circle.makeCircle();
+                data = circle.render();
                 log(data);
             }
             else if (shape === 'Triangle') {
@@ -58,7 +58,7 @@ function prompts() {
                     `${shapeColor}`
                 )
                 // call the makeTriangle method
-                data = triangle.makeTriangle();
+                data = triangle.render();
                 log(data);
             }
             else {
@@ -69,7 +69,7 @@ function prompts() {
                     `${shapeColor}`
                 )
                 // call the makeSquare method
-                data = square.makeSquare();
+                data = square.render();
                 log(data);
             }
             return data;

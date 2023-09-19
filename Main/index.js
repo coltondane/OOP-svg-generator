@@ -1,6 +1,7 @@
 // import libraries
 const inquirer = require('inquirer');
 const{ log } = require('console');
+const fs = require('fs');
 const Circle = require('./lib/circle.js');
 const Square = require('./lib/square.js');
 const Triangle = require('./lib/triangle.js');
@@ -75,7 +76,9 @@ function prompts() {
         })
         // render the svg file
         .then((data) => {
-
+            fs.writeFile('logo.svg', data, (err) =>
+                err ? console.error(err) : console.log('Success!')
+            );
         })
     }
 

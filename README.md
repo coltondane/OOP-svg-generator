@@ -11,7 +11,7 @@
 ## Installation
     N/A
 ## Usage
-    This application is very simple to use and will generate a logo for
+    This application is very simple to use and only requires CLI input that will generate a logo for the user with just a few keystrokes
 ## Contributions
     Kirtley - DU Teaching Advisor
 ## Tests

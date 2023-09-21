@@ -34,6 +34,10 @@ function prompts() {
         ])
         // Create the logo
         .then(({text, textColor, shape, shapeColor}) => {
+            // check text length
+            if (text.length > 3) {
+                throw new Error('Text must be 3 letters or less');
+            }
             // create data variable
             let data = '';
             // set the text to upper case

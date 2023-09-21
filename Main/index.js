@@ -48,7 +48,6 @@ function prompts() {
                 )
                 // call the makeCircle method
                 data = circle.render();
-                log(data);
             }
             else if (shape === 'Triangle') {
                 const triangle = new Triangle(
@@ -59,7 +58,6 @@ function prompts() {
                 )
                 // call the makeTriangle method
                 data = triangle.render();
-                log(data);
             }
             else {
                 const square = new Square(
@@ -70,7 +68,6 @@ function prompts() {
                 )
                 // call the makeSquare method
                 data = square.render();
-                log(data);
             }
             return data;
         })
@@ -79,6 +76,10 @@ function prompts() {
             fs.writeFile('logo.svg', data, (err) =>
                 err ? console.error(err) : console.log('Generated logo.svg')
             );
+        })
+        .catch((error) => {
+            log(error);
+            log('Something went wrong, could not create SVG')
         })
     }
 
